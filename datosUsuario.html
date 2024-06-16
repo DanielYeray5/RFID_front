@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Datos del Usuario</title>
+</head>
+<body>
+    <div class="DB">
+        <h1>Datos del Usuario</h1>
+        <div id="userInfo"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const rfid = params.get('rfid');
+            const nombre = params.get('nombre');
+            const correo = params.get('correo');
+            document.getElementById('userInfo').innerHTML = `
+                <p>RFID: ${rfid}</p>
+                <p>Nombre: ${nombre}</p>
+                <p>Correo: ${correo}</p>
+            `;
+        });
+    </script>
+</body>
+</html>

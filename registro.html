@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/registro.css">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="DA">
+        <h1>REGISTRO</h1>
+        <form id="FRM" enctype="multipart/form-data">
+            <div class="DB">
+                <label class="LB">Ingresa el RFID que se vinculará a tu usuario</label>
+                <input type="number" name="rfid" required>
+                <label class="LB">Ingresa tu Nombre</label>
+                <input type="text" name="nombre" required>
+                <label class="LB">Ingresa tu correo electrónico</label>
+                <input type="email" name="correo" required>
+                <label class="LB">Ingresa tu contraseña</label>
+                <input type="password" name="contraseña" required>
+            </div>
+            <div class="DC">
+                <input type="submit" value="Aceptar">
+                <input type="reset" value="Limpiar">
+            </div>
+        </form>
+        <div class="DD">
+            <form id="FRM_Regreso">
+                <input type="submit" value="Regresar al Inicio">
+            </form>
+        </div>
+    </div>
+    <script src="./js/index2.js"></script>
+    <script src="./js/conexion.js"></script>
+</body>
+</html>
