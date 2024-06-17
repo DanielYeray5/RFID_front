@@ -80,7 +80,7 @@ input[type="reset"] {
     padding: 10px 20px;
     border: none;
     border-radius: 8px;
-    background-color: #0288d1;
+    background-color: black;
     color: #ffffff;
     font-size: 1em;
     cursor: pointer;
@@ -89,7 +89,7 @@ input[type="reset"] {
 
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-    background-color: #0277bd;
+    background-color: gray;
 }
 
 .DD {
@@ -100,7 +100,7 @@ input[type="reset"]:hover {
     padding: 10px 20px;
     border: none;
     border-radius: 8px;
-    background-color: #0288d1;
+    background-color: #B71C1C;
     color: #ffffff;
     font-size: 1em;
     cursor: pointer;
@@ -108,7 +108,7 @@ input[type="reset"]:hover {
 }
 
 .DD input[type="submit"]:hover {
-    background-color: #0277bd;
+    background-color: #D32F2F;
 }
 
 @media (max-width: 600px) {
