@@ -2,7 +2,7 @@ document.getElementById('FRM_Inicio').addEventListener('submit', function(event)
     event.preventDefault();
     const rfid = document.getElementById('RFID').value;
     const nombreUsuario = document.getElementById('Usuario').value;
-    const contraseña = document.querySelector('input[name="contraseña"]').value; // Obtener el valor de la contraseña
+    const contraseña = document.querySelector('input[name="contraseña"]').value; 
 
     fetch('http://localhost:3000/iniciarSesion', {
         method: 'POST',
