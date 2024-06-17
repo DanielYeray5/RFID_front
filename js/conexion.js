@@ -6,7 +6,7 @@ document.getElementById('FRM').addEventListener('submit', function (event) {
     const correo = document.querySelector('input[name="correo"]').value;
     const contraseña = document.querySelector('input[name="contraseña"]').value;
 
-    fetch('http://localhost:3000/registro', {
+    fetch('https://rfid-back.onrender.com/registro', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

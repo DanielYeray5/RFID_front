@@ -4,7 +4,7 @@ document.getElementById('FRM_Inicio').addEventListener('submit', function(event)
     const nombreUsuario = document.getElementById('Usuario').value;
     const contraseña = document.querySelector('input[name="contraseña"]').value; 
 
-    fetch('http://localhost:3000/iniciarSesion', {
+    fetch('https://rfid-back.onrender.com/iniciarSesion', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
