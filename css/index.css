@@ -1,57 +1,79 @@
-/* Estilos globales */
+/* index.css */
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f7fa;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
+    animation: backgroundAnimation 10s infinite alternate;
 }
 
-h1, h2 {
-    text-align: center;
-    color: #333;
+@keyframes backgroundAnimation {
+    0% { background-color: #e0f7fa; }
+    100% { background-color: #b2ebf2; }
 }
 
 .DB {
-    background-color: #fff;
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
+    background: linear-gradient(135deg, #81d4fa, #01579b);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #ffffff;
+    transform: scale(0.9);
+    animation: scaleUp 0.5s ease-in-out forwards;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+@keyframes scaleUp {
+    to { transform: scale(1); }
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
 }
 
 .DA {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .LA {
-    font-size: 14px;
-    color: #555;
+    display: block;
+    margin-bottom: 5px;
+    color: #e0f7fa;
 }
 
-input[type="number"], input[type="RFID"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    width: calc(100% - 22px); /* Ajuste para el padding */
-    transition: border-color 0.3s;
-}
-
-input[type="number"]:focus, input[type="RFID"]:focus {
-    border-color: #007BFF;
+input[type="number"],
+input[type="text"],
+input[type="password"] {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
 }
 
 .DC {
@@ -59,55 +81,66 @@ input[type="number"]:focus, input[type="RFID"]:focus {
     justify-content: space-between;
 }
 
-input[type="submit"], input[type="reset"] {
+input[type="submit"],
+input[type="reset"] {
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 8px;
+    background-color: black;
+    color: #ffffff;
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-input[type="submit"] {
-    background-color: #007BFF;
-    color: #fff;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-input[type="reset"] {
-    background-color: #6c757d;
-    color: #fff;
-}
-
+input[type="submit"]:hover,
 input[type="reset"]:hover {
-    background-color: #5a6268;
+    background-color: gray;
 }
 
 .Registro {
-    text-align: center;
     margin-top: 20px;
 }
 
-.Registro p {
-    margin: 0;
-    font-size: 14px;
-    color: #555;
+.Registro h4 {
+    color: #e0f7fa;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-#FRM_Reg input[type="submit"] {
-    background-color: #28a745;
-    color: #fff;
+.Registro input[type="submit"] {
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 8px;
+    background-color: #B71C1C;
+    color: #ffffff;
+    font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-#FRM_Reg input[type="submit"]:hover {
-    background-color: #218838;
+.Registro input[type="submit"]:hover {
+    background-color: #D32F2F ;
+}
+
+@media (max-width: 600px) {
+    .DB {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    input[type="submit"],
+    input[type="reset"],
+    .Registro input[type="submit"] {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
 }
